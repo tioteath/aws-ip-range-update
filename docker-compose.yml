@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  lambda:
+    image: lambci/lambda:ruby2.5
+    volumes:
+      - ./:/var/task
+    environment:
+      - AWS_LAMBDA_FUNCTION_NAME
+      - AWS_LAMBDA_FUNCTION_VERSION
+      - AWS_LAMBDA_FUNCTION_INVOKED_ARN
+      - AWS_LAMBDA_FUNCTION_MEMORY_SIZE
+      - AWS_LAMBDA_FUNCTION_TIMEOUT
+      - AWS_LAMBDA_FUNCTION_HANDLER
+      - AWS_LAMBDA_EVENT_BODY
+      - AWS_REGION
+      - AWS_DEFAULT_REGION
+      - AWS_ACCOUNT_ID
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_SESSION_TOKEN
+      - DEBUG
+      - DOCKER_LAMBDA_USE_STDIN
+      - REGION
+      - SECURITY_GROUP
+      - SECURITY_GROUP_LIMIT

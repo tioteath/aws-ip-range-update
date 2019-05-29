@@ -1,2 +1,5 @@
-tmp_rumbda
-index.zip
+lambda.zip
+.bundle
+.env
+build/**/*
+vendor/bundle/**/*
